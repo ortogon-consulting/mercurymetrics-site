@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MercuryMetrics - Discover how you create value</title>
+  <meta name="description" content="There is more than one way to be a great Relationship Manager. Discover your RM archetype with MercuryMetrics." />
+  <meta name="theme-color" content="#f4f0e8" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.mercury-metrics.ch/" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/favicon-512.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/favicon-512.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MercuryMetrics - Discover how you create value" />
+  <meta property="og:description" content="There is more than one way to be a great Relationship Manager. Discover your RM archetype with MercuryMetrics." />
+  <meta property="og:url" content="https://www.mercury-metrics.ch/" />
+  <meta property="og:image" content="https://www.mercury-metrics.ch/assets/social/mercurymetrics-socialshare-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MercuryMetrics - Discover how you create value" />
+  <meta name="twitter:description" content="There is more than one way to be a great Relationship Manager. Discover your RM archetype with MercuryMetrics." />
+  <meta name="twitter:image" content="https://www.mercury-metrics.ch/assets/social/mercurymetrics-socialshare-1200x630.png" />
+
+  <style>
+    :root {
+      --mm-bg: #f4f0e8;
+      --mm-bg-2: #eee8dd;
+      --mm-paper: #fbf9f4;
+      --mm-ink: #0d1728;
+      --mm-ink-2: #172238;
+      --mm-muted: #657083;
+      --mm-line: rgba(13, 23, 40, 0.14);
+      --mm-line-strong: rgba(13, 23, 40, 0.22);
+      --mm-gold: #d9b45e;
+      --mm-teal: #119c93;
+      --mm-teal-hover: #0b887f;
+      --mm-dark: #081220;
+      --mm-dark-2: #0d192b;
+      --mm-offwhite: #edf1f5;
+      --mm-cta-top: #dfe5e3;
+      --mm-cta-mid: #d6dede;
+      --mm-cta-bottom: #cfd9da;
+
+      --pioneer: #5bc3b5;
+      --builder: #63b999;
+      --expert: #85b8d2;
+      --strategist: #a896cf;
+      --confidant: #c88faa;
+      --architect: #d8b15d;
+
+      --max: 1180px;
+      --gutter: clamp(20px, 4vw, 52px);
+      --display: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --body: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      margin: 0;
+      color: var(--mm-ink);
+      background: var(--mm-bg);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    svg { display: block; }
+
+    .shell {
+      width: min(calc(100% - (2 * var(--gutter))), var(--max));
+      margin-inline: auto;
+    }
+
+    .reframe-grid > *,
+    .same-head > *,
+    .pattern-grid > *,
+    .why-it-matters > * {
+      min-width: 0;
+    }
+
+    .nav-wrap {
+      position: absolute;
+      inset: 0 0 auto 0;
+      z-index: 20;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--mm-line);
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mm-gold);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 42px;
+      padding: 0 15px;
+      border: 1px solid var(--mm-line-strong);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(255,255,255,.18);
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    .nav-cta:hover {
+      background: rgba(255,255,255,.55);
+      border-color: rgba(13, 23, 40, .32);
+      transform: translateY(-1px);
+    }
+
+    .arrow { font-size: 1.05em; transform: translateY(-1px); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-height: 52px;
+      padding: 0 23px;
+      border-radius: 999px;
+      border: 1px solid var(--mm-teal);
+      background: var(--mm-teal);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 850;
+      letter-spacing: -.01em;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 8px 24px rgba(17,156,147,.12);
+    }
+
+    .btn:hover {
+      background: var(--mm-teal-hover);
+      border-color: var(--mm-teal-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(17,156,147,.18);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(92px, 12vw, 150px) 0 clamp(90px, 12vw, 144px);
+      isolation: isolate;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+      max-width: 1180px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0 auto 26px;
+      max-width: 1180px;
+      font-family: var(--display);
+      font-size: clamp(50px, 6.4vw, 88px);
+      line-height: .97;
+      letter-spacing: -.062em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    .hero h1 .accent {
+      color: var(--mm-gold);
+    }
+
+    .hero-line {
+      display: block;
+    }
+
+    .hero-accent-line {
+      white-space: nowrap;
+      font-size: .98em;
+    }
+
+    .hero .lede {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--mm-muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+      letter-spacing: -.015em;
+      text-wrap: balance;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta {
+      color: var(--mm-muted);
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .01em;
+    }
+
+    .hero-geometry {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(920px, 90vw);
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, -48%);
+      opacity: .20;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-geometry .axis {
+      stroke: var(--mm-ink);
+      stroke-width: .9;
+      opacity: .22;
+    }
+
+    .hero-geometry .ring {
+      fill: none;
+      stroke: var(--mm-ink);
+      stroke-width: .8;
+      opacity: .12;
+    }
+
+    .hero-geometry .node {
+      opacity: .55;
+      filter: drop-shadow(0 0 14px rgba(13,23,40,.04));
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--mm-muted);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .72;
+    }
+
+    .chapter {
+      position: relative;
+      padding: clamp(92px, 12vw, 158px) 0;
+    }
+
+    .chapter + .chapter {
+      border-top: 1px solid var(--mm-line);
+    }
+
+    .chapter-number {
+      color: var(--mm-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: .98;
+      letter-spacing: -.058em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    .body-lg {
+      margin: 0;
+      color: var(--mm-muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.56;
+      letter-spacing: -.015em;
+    }
+
+    .body-md {
+      margin: 0;
+      color: var(--mm-muted);
+      font-size: 16px;
+      line-height: 1.62;
+      letter-spacing: -.01em;
+    }
+
+    .strong { color: var(--mm-ink); font-weight: 760; }
+
+    .reframe-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .88fr) minmax(440px, 1.12fr);
+      gap: clamp(48px, 8vw, 110px);
+      align-items: center;
+    }
+
+    .reframe-copy .body-lg {
+      margin-top: 26px;
+      max-width: 650px;
+    }
+
+    .reframe-line {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--mm-ink);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .reframe-line::before {
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: var(--mm-gold);
+    }
+
+    .archetype-system {
+      position: relative;
+      aspect-ratio: 1 / .88;
+      display: grid;
+      place-items: center;
+      min-height: 520px;
+    }
+
+    .archetype-system svg {
+      width: 74%;
+      max-width: 520px;
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    .system-ring,
+    .system-axis {
+      fill: none;
+      stroke: var(--mm-ink);
+      stroke-width: 1;
+      opacity: .15;
+    }
+
+    .system-axis { opacity: .13; }
+
+    .system-profile {
+      fill: rgba(13,23,40,.018);
+      stroke: var(--mm-ink);
+      stroke-width: 1.4;
+      opacity: .12;
+    }
+
+    .arch-label {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      max-width: calc(50% - 10px);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: -.01em;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .arch-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--dot);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--dot), transparent 87%);
+      flex: 0 0 auto;
+    }
+
+    .arch-label.is-visible { opacity: 1; transform: translateY(0); }
+
+    .label-pioneer { --dot: var(--pioneer); top: 0; left: 50%; transform: translate(-50%, 10px); }
+    .label-pioneer.is-visible { transform: translate(-50%, 0); }
+    .label-builder { --dot: var(--builder); top: 26%; right: 0; }
+    .label-expert { --dot: var(--expert); bottom: 19%; right: 1%; }
+    .label-strategist { --dot: var(--strategist); bottom: 0; left: 50%; transform: translate(-50%, 10px); }
+    .label-strategist.is-visible { transform: translate(-50%, 0); }
+    .label-confidant { --dot: var(--confidant); bottom: 19%; left: 0; }
+    .label-architect { --dot: var(--architect); top: 26%; left: 1%; }
+
+    .same-title {
+      background: var(--mm-paper);
+    }
+
+    .same-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, .7fr);
+      gap: clamp(42px, 7vw, 92px);
+      align-items: end;
+    }
+
+    .same-head .body-lg { max-width: 620px; }
+
+    .contrast-lines {
+      margin-top: clamp(58px, 8vw, 92px);
+      border-top: 1px solid var(--mm-line-strong);
+    }
+
+    .contrast-row {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--mm-line);
+      align-items: baseline;
+    }
+
+    .contrast-kicker {
+      color: var(--mm-muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .contrast-row strong {
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.35;
+      letter-spacing: -.02em;
+    }
+
+    .contrast-row span:last-child {
+      color: var(--mm-muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(380px, 1.05fr);
+      gap: clamp(46px, 8vw, 110px);
+      align-items: center;
+    }
+
+    .pattern-copy .body-lg {
+      margin-top: 26px;
+      max-width: 650px;
+    }
+
+    .not-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--mm-line-strong);
+    }
+
+    .not-item {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--mm-line);
+      color: var(--mm-muted);
+      font-size: 14px;
+      font-weight: 680;
+    }
+
+    .not-item b { color: var(--mm-ink); font-weight: 850; }
+    .not-mark { color: var(--mm-gold); font-weight: 900; }
+
+    .radar-stage {
+      position: relative;
+      min-height: 560px;
+      display: grid;
+      place-items: center;
+    }
+
+    .radar-stage::before {
+      content: "";
+      position: absolute;
+      inset: 12% 4%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.58) 0%, rgba(255,255,255,0) 67%);
+      pointer-events: none;
+    }
+
+    .radar-stage svg {
+      width: min(580px, 96%);
+      overflow: visible;
+      position: relative;
+      z-index: 2;
+    }
+
+    .radar-ring,
+    .radar-axis {
+      fill: none;
+      stroke: var(--mm-ink);
+      stroke-width: 1;
+      opacity: .15;
+    }
+
+    .radar-shape {
+      fill: rgba(17,156,147,.055);
+      stroke: var(--mm-teal);
+      stroke-width: 2;
+      stroke-linejoin: round;
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      transition: stroke-dashoffset 1.5s cubic-bezier(.2,.75,.2,1), fill 1s ease .65s;
+    }
+
+    .radar-stage.is-visible .radar-shape { stroke-dashoffset: 0; }
+
+    .radar-node {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scale(.6);
+      transition: opacity .4s ease, transform .4s ease;
+    }
+
+    .radar-stage.is-visible .radar-node { opacity: 1; transform: scale(1); }
+    .radar-stage.is-visible .radar-node:nth-of-type(1) { transition-delay: .8s; }
+    .radar-stage.is-visible .radar-node:nth-of-type(2) { transition-delay: .92s; }
+    .radar-stage.is-visible .radar-node:nth-of-type(3) { transition-delay: 1.04s; }
+    .radar-stage.is-visible .radar-node:nth-of-type(4) { transition-delay: 1.16s; }
+    .radar-stage.is-visible .radar-node:nth-of-type(5) { transition-delay: 1.28s; }
+    .radar-stage.is-visible .radar-node:nth-of-type(6) { transition-delay: 1.4s; }
+
+    #why-it-matters {
+      background: linear-gradient(
+        180deg,
+        var(--mm-bg) 0%,
+        var(--mm-bg) 73%,
+        #eeeae2 84%,
+        #e7e8e3 92%,
+        var(--mm-cta-top) 100%
+      );
+    }
+
+    .why-it-matters {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+      gap: clamp(48px, 8vw, 110px);
+      align-items: center;
+    }
+
+    .why-intro .body-lg {
+      margin-top: 26px;
+      max-width: 620px;
+    }
+
+    .why-rows { border-top: 1px solid var(--mm-line-strong); }
+
+    .why-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 22px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--mm-line);
+    }
+
+    .why-row .num {
+      color: var(--mm-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+
+    .why-row strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+      letter-spacing: -.02em;
+    }
+
+    .why-row p {
+      margin: 0;
+      color: var(--mm-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .final-cta-section {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(
+        180deg,
+        var(--mm-cta-top) 0%,
+        var(--mm-cta-mid) 46%,
+        var(--mm-cta-bottom) 100%
+      );
+      color: var(--mm-ink);
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .final-cta-main {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      padding: clamp(96px, 13vh, 156px) var(--gutter) clamp(72px, 9vh, 104px);
+    }
+
+    .final-cta-main::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 49%;
+      width: min(760px, 68vw);
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247,249,247,.47) 0%, rgba(247,249,247,.18) 38%, rgba(247,249,247,0) 72%);
+      pointer-events: none;
+    }
+
+    .final-cta-content {
+      width: min(900px, 100%);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .final-cta-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #b78f37;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .final-cta-kicker::before,
+    .final-cta-kicker::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      opacity: .62;
+    }
+
+    .final-cta-title {
+      margin: 25px auto 28px;
+      max-width: 860px;
+      font-family: var(--display);
+      font-size: clamp(58px, 7.2vw, 104px);
+      line-height: .91;
+      letter-spacing: -.065em;
+      font-weight: 900;
+      color: var(--mm-ink);
+      text-wrap: balance;
+    }
+
+    .final-cta-title span { display: block; }
+    .final-cta-title .gold { color: #c89e43; }
+
+    .final-cta-lede {
+      max-width: 680px;
+      margin: 0 auto;
+      color: rgba(13, 23, 40, .64);
+      font-size: clamp(17px, 1.7vw, 21px);
+      line-height: 1.58;
+      letter-spacing: -.012em;
+      text-wrap: balance;
+    }
+
+    .final-cta-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .final-cta-section .meta {
+      color: rgba(13, 23, 40, .48);
+    }
+
+    .final-cta-geometry {
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      top: 49%;
+      width: min(1180px, 92vw);
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, -50%);
+      opacity: .34;
+      pointer-events: none;
+    }
+
+    .final-ring,
+    .final-axis {
+      fill: none;
+      stroke: var(--mm-ink);
+      stroke-width: .9;
+      opacity: .15;
+    }
+
+    .final-axis { opacity: .11; }
+
+    .final-profile {
+      fill: rgba(17,156,147,.028);
+      stroke: rgba(17,156,147,.48);
+      stroke-width: 1.55;
+      stroke-linejoin: round;
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      transition: stroke-dashoffset 1.25s cubic-bezier(.2,.75,.2,1), fill 1s ease .55s;
+    }
+
+    .final-node {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scale(.55);
+      transition: opacity .38s ease, transform .38s ease;
+    }
+
+    .final-cta-section.is-visible .final-profile {
+      stroke-dashoffset: 0;
+      fill: rgba(17,156,147,.045);
+    }
+
+    .final-cta-section.is-visible .final-node {
+      opacity: .82;
+      transform: scale(1);
+    }
+
+    .final-cta-section.is-visible .final-node:nth-of-type(1) { transition-delay: .55s; }
+    .final-cta-section.is-visible .final-node:nth-of-type(2) { transition-delay: .64s; }
+    .final-cta-section.is-visible .final-node:nth-of-type(3) { transition-delay: .73s; }
+    .final-cta-section.is-visible .final-node:nth-of-type(4) { transition-delay: .82s; }
+    .final-cta-section.is-visible .final-node:nth-of-type(5) { transition-delay: .91s; }
+    .final-cta-section.is-visible .final-node:nth-of-type(6) { transition-delay: 1s; }
+
+    .final-footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(13,23,40,.10);
+      color: rgba(13,23,40,.44);
+    }
+
+    .final-footer-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 11px;
+    }
+
+    .final-footer .brand {
+      color: #b78f37;
+      font-size: 10px;
+      opacity: .88;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .72s ease, transform .72s cubic-bezier(.2,.7,.25,1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: .08s; }
+    .delay-2 { transition-delay: .16s; }
+    .delay-3 { transition-delay: .24s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
+      .reveal, .arch-label, .radar-node, .final-node { opacity: 1 !important; transform: none !important; }
+      .label-pioneer, .label-strategist { transform: translateX(-50%) !important; }
+      .radar-shape, .final-profile { stroke-dashoffset: 0 !important; }
+    }
+
+    @media (min-width: 981px) and (min-height: 680px) {
+      html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .hero,
+      .chapter,
+      .final-cta-section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      .hero,
+      .chapter {
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+      }
+
+      .hero {
+        padding-top: clamp(92px, 11vh, 132px);
+        padding-bottom: clamp(70px, 9vh, 108px);
+      }
+
+      .chapter {
+        padding-top: clamp(52px, 7vh, 82px);
+        padding-bottom: clamp(52px, 7vh, 82px);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .reframe-grid,
+      .pattern-grid,
+      .same-head,
+      .why-it-matters {
+        grid-template-columns: 1fr;
+      }
+
+      .reframe-grid,
+      .pattern-grid { gap: 56px; }
+
+      .archetype-system { min-height: 500px; }
+      .radar-stage { min-height: 500px; }
+
+      .contrast-row {
+        grid-template-columns: 120px 1fr;
+      }
+
+      .contrast-row span:last-child {
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 700px) {
+      :root { --gutter: 22px; }
+
+      .nav { min-height: 64px; }
+      .brand { font-size: 11px; }
+      .nav-cta { min-height: 38px; padding: 0 13px; font-size: 12px; }
+
+      .hero {
+        min-height: auto;
+        padding-top: 96px;
+        padding-bottom: 104px;
+      }
+
+      .hero h1 { font-size: clamp(46px, 13vw, 66px); }
+      .hero-line { display: inline; }
+      .hero-line::after { content: " "; }
+      .hero-line:last-child::after { content: ""; }
+      .hero-accent-line { white-space: normal; }
+      .hero .lede { font-size: 17px; }
+      .hero-geometry {
+        width: min(540px, calc(100% + (2 * var(--gutter))));
+        opacity: .16;
+      }
+      .scroll-cue { display: none; }
+
+      .chapter { padding: 92px 0; }
+      h2 { font-size: clamp(43px, 12vw, 62px); }
+
+      .archetype-system {
+        min-height: 430px;
+        width: 100%;
+        padding-inline: 12px;
+      }
+
+      .archetype-system svg { width: 68%; }
+      .arch-label { font-size: 12px; }
+      .label-builder { right: 0; }
+      .label-expert { right: 0; }
+      .label-confidant { left: 0; }
+      .label-architect { left: 0; }
+
+      .contrast-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 24px 0;
+      }
+
+      .contrast-row span:last-child { grid-column: auto; }
+
+      .pattern-grid { gap: 46px; }
+      .radar-stage { min-height: 420px; }
+
+      .why-row { grid-template-columns: 50px 1fr; }
+
+      .final-cta-main {
+        padding: 108px var(--gutter) 76px;
+      }
+
+      .final-cta-title {
+        font-size: clamp(46px, 14vw, 82px);
+      }
+
+      .final-cta-geometry {
+        width: min(760px, calc(100% + (2 * var(--gutter))));
+        opacity: .25;
+      }
+
+      .final-footer-inner {
+        padding: 22px 0 26px;
+        min-height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .nav-cta .nav-label { display: none; }
+      .nav-cta { width: 38px; padding: 0; justify-content: center; }
+      .btn { width: 100%; }
+      .hero-actions { width: min(100%, 360px); margin-inline: auto; }
+      .archetype-system { min-height: 390px; }
+      .arch-label { font-size: 11px; gap: 6px; }
+      .arch-label::before { width: 6px; height: 6px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--dot), transparent 87%); }
+      .final-cta-title { font-size: clamp(42px, 13.5vw, 64px); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-wrap">
+    <header class="nav shell">
+      <a class="brand" href="#top" aria-label="MercuryMetrics home">MercuryMetrics</a>
+      <a class="nav-cta" href="https://archetype.mercury-metrics.ch/?utm_source=mercury-metrics&utm_medium=website&utm_campaign=rm-archetype&utm_content=nav" rel="noopener">
+        <span class="nav-label">Discover your archetype</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="hero shell">
+      <svg class="hero-geometry" viewBox="0 0 600 600" aria-hidden="true">
+        <polygon class="ring" points="300,78 492,189 492,411 300,522 108,411 108,189" />
+        <polygon class="ring" points="300,132 445,216 445,384 300,468 155,384 155,216" />
+        <polygon class="ring" points="300,186 398,243 398,357 300,414 202,357 202,243" />
+        <line class="axis" x1="300" y1="300" x2="300" y2="78" />
+        <line class="axis" x1="300" y1="300" x2="492" y2="189" />
+        <line class="axis" x1="300" y1="300" x2="492" y2="411" />
+        <line class="axis" x1="300" y1="300" x2="300" y2="522" />
+        <line class="axis" x1="300" y1="300" x2="108" y2="411" />
+        <line class="axis" x1="300" y1="300" x2="108" y2="189" />
+        <circle class="node" cx="300" cy="78" r="5" fill="var(--pioneer)" />
+        <circle class="node" cx="492" cy="189" r="5" fill="var(--builder)" />
+        <circle class="node" cx="492" cy="411" r="5" fill="var(--expert)" />
+        <circle class="node" cx="300" cy="522" r="5" fill="var(--strategist)" />
+        <circle class="node" cx="108" cy="411" r="5" fill="var(--confidant)" />
+        <circle class="node" cx="108" cy="189" r="5" fill="var(--architect)" />
+      </svg>
+
+      <div class="hero-copy reveal is-visible">
+        <h1 class="hero-title">
+          <span class="hero-line">There is more than</span>
+          <span class="hero-line">one way to be a</span>
+          <span class="hero-line accent hero-accent-line">great Relationship Manager.</span>
+        </h1>
+        <p class="lede">The same role can hide very different ways of building trust, creating momentum and becoming valuable to clients. MercuryMetrics makes those differences visible.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://archetype.mercury-metrics.ch/?utm_source=mercury-metrics&utm_medium=website&utm_campaign=rm-archetype&utm_content=hero" rel="noopener">Discover your RM archetype <span class="arrow" aria-hidden="true">→</span></a>
+          <div class="meta">Free · 36 questions · 7–10 minutes</div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">Scroll to explore</div>
+    </section>
+
+    <section class="chapter" id="reframe">
+      <div class="shell reframe-grid">
+        <div class="reframe-copy">
+          <div class="chapter-number reveal">01 - Reframe</div>
+          <h2 class="reveal delay-1">Hunter.<br>Farmer.<br><span style="color:var(--mm-gold)">Too simple.</span></h2>
+          <p class="body-lg reveal delay-2">Relationship Managers are often described through a familiar distinction: win the relationship or develop it. But the ways RMs create value are more varied than that.</p>
+          <div class="reframe-line reveal delay-3">Six orientations. Countless combinations.</div>
+        </div>
+
+        <div class="archetype-system reveal" data-sequence="archetypes" aria-label="The six MercuryMetrics RM archetypes">
+          <svg viewBox="0 0 600 540" aria-hidden="true">
+            <polygon class="system-ring" points="300,58 504,176 504,412 300,530 96,412 96,176" />
+            <polygon class="system-ring" points="300,120 451,207 451,381 300,468 149,381 149,207" />
+            <polygon class="system-ring" points="300,182 398,238 398,350 300,406 202,350 202,238" />
+            <line class="system-axis" x1="300" y1="294" x2="300" y2="58" />
+            <line class="system-axis" x1="300" y1="294" x2="504" y2="176" />
+            <line class="system-axis" x1="300" y1="294" x2="504" y2="412" />
+            <line class="system-axis" x1="300" y1="294" x2="300" y2="530" />
+            <line class="system-axis" x1="300" y1="294" x2="96" y2="412" />
+            <line class="system-axis" x1="300" y1="294" x2="96" y2="176" />
+            <polygon class="system-profile" points="300,142 417,226 398,350 300,429 187,359 164,216" />
+            <circle cx="300" cy="142" r="4.5" fill="var(--pioneer)" />
+            <circle cx="417" cy="226" r="4.5" fill="var(--builder)" />
+            <circle cx="398" cy="350" r="4.5" fill="var(--expert)" />
+            <circle cx="300" cy="429" r="4.5" fill="var(--strategist)" />
+            <circle cx="187" cy="359" r="4.5" fill="var(--confidant)" />
+            <circle cx="164" cy="216" r="4.5" fill="var(--architect)" />
+          </svg>
+
+          <div class="arch-label label-pioneer">Pioneer</div>
+          <div class="arch-label label-builder">Builder</div>
+          <div class="arch-label label-expert">Expert</div>
+          <div class="arch-label label-strategist">Strategist</div>
+          <div class="arch-label label-confidant">Confidant</div>
+          <div class="arch-label label-architect">Architect</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter same-title" id="difference">
+      <div class="shell">
+        <div class="same-head">
+          <div>
+            <div class="chapter-number reveal">02 - Observation</div>
+            <h2 class="reveal delay-1">Same title.<br><span style="color:var(--mm-gold)">Different value.</span></h2>
+          </div>
+          <p class="body-lg reveal delay-2">Two RMs can serve similar clients, hold the same role and both perform strongly while creating value in fundamentally different ways.</p>
+        </div>
+
+        <div class="contrast-lines">
+          <div class="contrast-row reveal">
+            <div class="contrast-kicker">Momentum</div>
+            <strong>One RM creates movement by opening new relationships.</strong>
+            <span>Opportunity begins with access, energy and forward motion.</span>
+          </div>
+          <div class="contrast-row reveal">
+            <div class="contrast-kicker">Relevance</div>
+            <strong>Another becomes indispensable by understanding complexity.</strong>
+            <span>Value emerges through judgment, substance and difficult questions.</span>
+          </div>
+          <div class="contrast-row reveal">
+            <div class="contrast-kicker">Trust</div>
+            <strong>Another is invited in before the financial question is even defined.</strong>
+            <span>The relationship creates access to the real decision underneath.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="pattern">
+      <div class="shell pattern-grid">
+        <div class="pattern-copy">
+          <div class="chapter-number reveal">03 - Pattern</div>
+          <h2 class="reveal delay-1">Your way of creating value <span style="color:var(--mm-gold)">has a pattern.</span></h2>
+          <p class="body-lg reveal delay-2">MercuryMetrics looks for the orientations you naturally tend to rely on across relationships, decisions, opportunities and complexity.</p>
+
+          <div class="not-list reveal delay-3" aria-label="What an archetype profile is not">
+            <div class="not-item"><span class="not-mark">-</span><span>Not a <b>personality type</b></span></div>
+            <div class="not-item"><span class="not-mark">-</span><span>Not a <b>performance score</b></span></div>
+            <div class="not-item"><span class="not-mark">-</span><span>Not a box you either <b>fit or do not</b></span></div>
+          </div>
+        </div>
+
+        <div class="radar-stage reveal" data-radar aria-label="Illustrative six-dimensional profile shape">
+          <svg viewBox="0 0 600 560" aria-hidden="true">
+            <polygon class="radar-ring" points="300,58 504,176 504,412 300,530 96,412 96,176" />
+            <polygon class="radar-ring" points="300,120 451,207 451,381 300,468 149,381 149,207" />
+            <polygon class="radar-ring" points="300,182 398,238 398,350 300,406 202,350 202,238" />
+            <line class="radar-axis" x1="300" y1="294" x2="300" y2="58" />
+            <line class="radar-axis" x1="300" y1="294" x2="504" y2="176" />
+            <line class="radar-axis" x1="300" y1="294" x2="504" y2="412" />
+            <line class="radar-axis" x1="300" y1="294" x2="300" y2="530" />
+            <line class="radar-axis" x1="300" y1="294" x2="96" y2="412" />
+            <line class="radar-axis" x1="300" y1="294" x2="96" y2="176" />
+
+            <polygon class="radar-shape" points="300,136 421,224 392,347 300,435 185,361 165,216" />
+
+            <circle class="radar-node" cx="300" cy="136" r="6" fill="var(--pioneer)" />
+            <circle class="radar-node" cx="421" cy="224" r="6" fill="var(--builder)" />
+            <circle class="radar-node" cx="392" cy="347" r="6" fill="var(--expert)" />
+            <circle class="radar-node" cx="300" cy="435" r="6" fill="var(--strategist)" />
+            <circle class="radar-node" cx="185" cy="361" r="6" fill="var(--confidant)" />
+            <circle class="radar-node" cx="165" cy="216" r="6" fill="var(--architect)" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="why-it-matters">
+      <div class="shell why-it-matters">
+        <div class="why-intro">
+          <div class="chapter-number reveal">04 - Relevance</div>
+          <h2 class="reveal delay-1">Why it <span style="color:var(--mm-gold)">matters.</span></h2>
+          <p class="body-lg reveal delay-2">The interesting question is not which archetype is "best", but where the way you naturally create value is most useful and where another orientation may matter more.</p>
+        </div>
+
+        <div class="why-rows">
+          <div class="why-row reveal">
+            <div class="num">01</div>
+            <div>
+              <strong>Different situations reward different strengths.</strong>
+              <p>The way you naturally operate can be especially valuable in some client moments and less useful in others.</p>
+            </div>
+          </div>
+          <div class="why-row reveal">
+            <div class="num">02</div>
+            <div>
+              <strong>Strengths can shape blind spots.</strong>
+              <p>The approaches we rely on most naturally are often the ones we reach for first even when another approach might serve the situation better.</p>
+            </div>
+          </div>
+          <div class="why-row reveal">
+            <div class="num">03</div>
+            <div>
+              <strong>Fit matters.</strong>
+              <p>Clients, roles and environments can reinforce the way you create value or leave part of it underused.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section" id="discover" data-final-cta>
+      <svg class="final-cta-geometry" viewBox="0 0 600 600" aria-hidden="true">
+        <polygon class="final-ring" points="300,54 513,177 513,423 300,546 87,423 87,177" />
+        <polygon class="final-ring" points="300,116 459,208 459,392 300,484 141,392 141,208" />
+        <polygon class="final-ring" points="300,178 405,239 405,361 300,422 195,361 195,239" />
+        <line class="final-axis" x1="300" y1="300" x2="300" y2="54" />
+        <line class="final-axis" x1="300" y1="300" x2="513" y2="177" />
+        <line class="final-axis" x1="300" y1="300" x2="513" y2="423" />
+        <line class="final-axis" x1="300" y1="300" x2="300" y2="546" />
+        <line class="final-axis" x1="300" y1="300" x2="87" y2="423" />
+        <line class="final-axis" x1="300" y1="300" x2="87" y2="177" />
+
+        <polygon class="final-profile" points="300,138 427,227 398,357 300,447 181,369 161,220" />
+        <circle class="final-node" cx="300" cy="138" r="5.5" fill="var(--pioneer)" />
+        <circle class="final-node" cx="427" cy="227" r="5.5" fill="var(--builder)" />
+        <circle class="final-node" cx="398" cy="357" r="5.5" fill="var(--expert)" />
+        <circle class="final-node" cx="300" cy="447" r="5.5" fill="var(--strategist)" />
+        <circle class="final-node" cx="181" cy="369" r="5.5" fill="var(--confidant)" />
+        <circle class="final-node" cx="161" cy="220" r="5.5" fill="var(--architect)" />
+      </svg>
+
+      <div class="final-cta-main">
+        <div class="final-cta-content reveal">
+          <div class="final-cta-kicker">05 - Your profile</div>
+          <h2 class="final-cta-title">
+            <span>Six orientations.</span>
+            <span>One pattern.</span>
+            <span class="gold">Yours.</span>
+          </h2>
+          <p class="final-cta-lede">Discover the combination that shapes how you naturally tend to create value as a Relationship Manager.</p>
+          <div class="final-cta-actions">
+            <a class="btn" href="https://archetype.mercury-metrics.ch/?utm_source=mercury-metrics&utm_medium=website&utm_campaign=rm-archetype&utm_content=final" rel="noopener">Discover my RM archetype <span class="arrow" aria-hidden="true">→</span></a>
+            <div class="meta">Free · 36 questions · 7–10 minutes</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="final-footer">
+        <div class="shell final-footer-inner">
+          <span class="brand">MercuryMetrics</span>
+          <span>© 2026 MercuryMetrics. All rights reserved.</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const revealEls = document.querySelectorAll('.reveal');
+      const radar = document.querySelector('[data-radar]');
+      const archetypeSystem = document.querySelector('[data-sequence="archetypes"]');
+      const finalCta = document.querySelector('[data-final-cta]');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add('is-visible');
+
+          if (entry.target === archetypeSystem) {
+            const labels = [...entry.target.querySelectorAll('.arch-label')];
+            labels.forEach((label, index) => {
+              setTimeout(() => label.classList.add('is-visible'), 120 + index * 110);
+            });
+          }
+
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      revealEls.forEach((el) => {
+        if (!el.classList.contains('is-visible')) observer.observe(el);
+      });
+      if (radar) observer.observe(radar);
+      if (archetypeSystem) observer.observe(archetypeSystem);
+      if (finalCta) observer.observe(finalCta);
+    })();
+  </script>
+</body>
+</html>
